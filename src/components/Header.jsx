@@ -6,6 +6,7 @@ import store from '../redux/store';
 import { useDispatch, useSelector } from 'react-redux';
 import { searchAction } from '../redux/actions/searchAction';
 import LinkOrHeader from './LinkOrUser';
+import 'bootstrap/dist/css/bootstrap.min.css';
 // import { store } from "../index"
 
 const Header = (props) => {
@@ -59,11 +60,8 @@ const Header = (props) => {
                     <Link to="/" ><img src="https://www.tatvasoft.com/blog/wp-content/uploads/2015/12/logo.png" alt="Tatvasoft" /></Link>
                 </div>
 
-                <form className="" action="" onSubmit={handleSubmit}>
-                    <input type="text" placeholder="What are you looking for.." name="search" id="search-input-bar" value={search_state} className="form-control " onChange={handleChange}></input>
-                    <button type="submit" id="search-button" className="btn btn-success text-center"><img src="./images/search.svg" className="align-middle" />Search</button>
-                    <button type="reset" id="cancel-button" className="btn btn-danger text-center p-2">Cancel</button>
-                </form>
+                <input type="text" placeholder="What are you looking for.." id="search-input-bar" name="search" value={search_state} className="form-control border-secondary rounded-pill pr-5  " onChange={handleChange}></input>
+
 
                 <div className='link-cart-container'>
 
@@ -71,7 +69,7 @@ const Header = (props) => {
                         <Link to="/cart" className='text-decoration-none'><img src='images/cart.svg' /><strong><span className='text-light '>{total_items}</span></strong></Link>
                     </div>
 
-                    <div className=' link-container'>
+                    <div className='link-container'>
                         {/* <Link to="/login" className='text-decoration-none text-light '>Login</Link>
                         <Link to="/Register" className='text-decoration-none text-light '>Register</Link> */}
                         <LinkOrHeader user={user} />
