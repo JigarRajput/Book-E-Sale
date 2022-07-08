@@ -80,7 +80,7 @@ const Login = () => {
 
 
   return (
-    <div className='login-page'>
+    <div className='login-page bg-light'>
       <Header />
       {/* <Searchbox /> */}
       <div className='login-wrapper'>

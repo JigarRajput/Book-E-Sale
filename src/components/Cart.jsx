@@ -42,7 +42,7 @@ const Cart = () => {
     return (
         <div>
             <Header />
-            <div className='cart-page'>
+            <div className='cart-page bg-light'>
 
                 <h1> Cart Page </h1>
                 <div className='status-container'>
@@ -60,7 +60,7 @@ const Cart = () => {
                 </div>
 
                 <div className='main-layout-container mb-5'>
-                    <div className='cart-card-container'>
+                    <div className='cart-card-container '>
 
                         {items.map((book) => <CartCard book={book} />)}
 

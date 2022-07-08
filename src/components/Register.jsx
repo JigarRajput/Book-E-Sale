@@ -94,10 +94,10 @@ const Register = () => {
   }
 
   return (
-    <>
+    <div className='bg-light'>
       <Header />
       {/* <Searchbox/> */}
-      <section className="create-account-page-wrapper">
+      <section className="create-account-page-wrapper bg-light">
         <div className="container">
           <div className="breadcrumb-wrapper d-flex justify-content-center pt-4">
 
@@ -182,12 +182,7 @@ const Register = () => {
                       </div>
                     </div>
                   </div>
-                  {/* </Form>
-              </Formik> */}
-                  {/* </div> */}
 
-                  {/* <Formik>
-              <Form> */}
                   <div className="login-information mt-5">
 
                     <h2>Login Information</h2>
@@ -244,7 +239,7 @@ const Register = () => {
       </section>
 
       <Footer />
-    </>
+    </div>
 
   )
 

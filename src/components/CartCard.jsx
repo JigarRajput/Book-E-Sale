@@ -43,7 +43,7 @@ const CartCard = ({ book }) => {
 
         <div className=''>
             {/* {items.map((book) => ( */}
-            <div className='cart-card rounded mb-5'>
+            <div className='cart-card rounded mb-5 col-sm-4'>
 
                 <div className='cart-left'>
                     <img src={book.image} className='cart-image' alt="Denim Jeans" />

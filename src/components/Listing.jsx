@@ -60,6 +60,7 @@ const Listing = () => {
     return (
         <div className='bg-light'>
             <Header />
+
             <div className='listing-page bg-light' >
 
                 <h1 className='listing-title text-dark'>Product Listing</h1>

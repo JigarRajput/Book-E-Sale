@@ -31,10 +31,10 @@ const LinkOrHeader = ({ users }) => {
 
     if (user === "") {
         return (
-            <div >
+            <div className='m-1'>
 
-                <Link to="/login" className='text-decoration-none text-light '>Login</Link>
-                <Link to="/Register" className='text-decoration-none text-light '>Register</Link>
+                <Link to="/login" className='text-decoration-none text-light p-1 me-1 pe-3 '>Login</Link>
+                <Link to="/Register" className='text-decoration-none text-light p-1 ms-1'>Register</Link>
 
             </div>
         )
