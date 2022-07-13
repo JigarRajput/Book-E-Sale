@@ -142,9 +142,13 @@ body {
   float: right;
 }
 
-.link-container a:first-of-type {
+/* .link-container a:first-of-type {
   border-right: 2px solid whitesmoke;
-}
+} */
+
+/* .lANDr a:first-of-type {
+  border-right: 2px solid whitesmoke;
+} */
 
 .link-container a {
   padding: 0px 5px;

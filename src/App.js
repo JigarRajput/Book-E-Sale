@@ -10,6 +10,7 @@ import Register from './components/Register';
 import Login from './components/Login';
 import Cart from './components/Cart';
 import Listing from './components/Listing'
+import SellBook from './components/SellBook';
 
 
 
@@ -18,6 +19,7 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" exact element={<Listing />} />
+        <Route path="/sell" exact element={<SellBook />} />
         <Route path="/cart" exact element={<Cart />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />

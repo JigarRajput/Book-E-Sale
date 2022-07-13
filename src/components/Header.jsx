@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { searchAction } from '../redux/actions/searchAction';
 import LinkOrHeader from './LinkOrUser';
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import { store } from "../index"
+
 
 const Header = (props) => {
 
@@ -43,15 +43,18 @@ const Header = (props) => {
 
         const search_term = event.target.search.value;
         dispatch(searchAction(search_term))
-        console.log("you searched for", search_term)
-        console.log("state after search", store.getState())
+        // console.log("you searched for", search_term)
+        // console.log("state after search", store.getState())
     }
 
     const st = useSelector((state) => state.search.term)
-    console.log("your search term in state", st)
+    //console.log("your search term in state", st)
 
     const user = useSelector((state) => state.login.name)
-    console.log("username from header", user)
+    //console.log("username from header", user)
+
+
+    //if()
 
     return (
         <div className='header-container-main '>
@@ -61,6 +64,7 @@ const Header = (props) => {
                 </div>
 
                 <input type="text" placeholder="What are you looking for.." id="search-input-bar" name="search" value={search_state} className="form-control border-secondary rounded-pill pr-5  " onChange={handleChange}></input>
+
 
 
                 <div className='link-cart-container'>

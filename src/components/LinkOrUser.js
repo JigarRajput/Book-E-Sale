@@ -31,9 +31,9 @@ const LinkOrHeader = ({ users }) => {
 
     if (user === "") {
         return (
-            <div className='m-1'>
+            <div className='m-1 lANDr'>
 
-                <Link to="/login" className='text-decoration-none text-light p-1 me-1 pe-3 '>Login</Link>
+                <Link to="/login" className='text-decoration-none text-light p-1 me-1 pe-3' style={{ borderRight: "2px solid white" }}>Login</Link>
                 <Link to="/Register" className='text-decoration-none text-light p-1 ms-1'>Register</Link>
 
             </div>
@@ -44,14 +44,19 @@ const LinkOrHeader = ({ users }) => {
     else {
 
         return (
-            <div className='dropdown'>
+            <div class="d-flex flex-row">
 
-                <select name='select' onChange={handleChange}>
-                    <option >Hi {user}</option>
-                    <option >Logout</option>
-                </select>
+                <Link to="/sell" className="btn btn-dark btn-rounded p-2 text-light">Add Book</Link>
 
-            </div >
+                <div className='dropdown'>
+                    <select name='select' onChange={handleChange}>
+                        <option >Hi {user}</option>
+                        <option >Logout</option>
+                    </select>
+                </div >
+
+            </div>
+
         )
 
     }
