@@ -9,6 +9,7 @@ import LinkOrHeader from './LinkOrUser';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
+
 const Header = (props) => {
 
     const items = useSelector((state) => state.cart.cartItems)
@@ -59,8 +60,9 @@ const Header = (props) => {
     return (
         <div className='header-container-main '>
             <div className='header-wrapper-main bg-secondary '>
-                <div className='logo-container'>
-                    <Link to="/" ><img src="https://www.tatvasoft.com/blog/wp-content/uploads/2015/12/logo.png" alt="Tatvasoft" /></Link>
+                <div className='logo-container d-flex align-items-center'>
+                    <Link to="/" ><img src="/images/BB.png" alt="Tatvasoft" height={80} className="me-2" style={{ borderRadius: "50%" }} /></Link>
+                    <h2 className='text-light'>Book-Baazar</h2>
                 </div>
 
                 <input type="text" placeholder="What are you looking for.." id="search-input-bar" name="search" value={search_state} className="form-control border-secondary rounded-pill pr-5  " onChange={handleChange}></input>
