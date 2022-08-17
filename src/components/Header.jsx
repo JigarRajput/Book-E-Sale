@@ -1,14 +1,10 @@
 import React, { useState } from 'react';
 import '../index.css';
 import { Link } from 'react-router-dom';
-import Cart from "./Cart";
-import store from '../redux/store';
 import { useDispatch, useSelector } from 'react-redux';
 import { searchAction } from '../redux/actions/searchAction';
 import LinkOrHeader from './LinkOrUser';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-
 
 const Header = (props) => {
 
@@ -33,29 +29,12 @@ const Header = (props) => {
         setSearch(search_term)
         dispatch(searchAction(search_term))
         setSearch(search_term)
-        // console.log("you searched for", search_term)
-        // console.log("state after search", store.getState())
     }
 
-    const handleSubmit = (event) => {
-
-        //prevent browser reloding
-        event.preventDefault();
-
-        const search_term = event.target.search.value;
-        dispatch(searchAction(search_term))
-        // console.log("you searched for", search_term)
-        // console.log("state after search", store.getState())
-    }
 
     const st = useSelector((state) => state.search.term)
-    //console.log("your search term in state", st)
 
     const user = useSelector((state) => state.login.name)
-    //console.log("username from header", user)
-
-
-    //if()
 
     return (
         <div className='header-container-main '>
@@ -65,9 +44,7 @@ const Header = (props) => {
                     <h2 className='text-light'>Book-Baazar</h2>
                 </div>
 
-                <input type="text" placeholder="What are you looking for.." id="search-input-bar" name="search" value={search_state} className="form-control border-secondary rounded-pill pr-5  " onChange={handleChange}></input>
-
-
+                <input type="text" placeholder="What are you looking for..." id="search-input-bar" name="search" value={search_state} className="form-control border-secondary rounded-pill pr-5  " onChange={handleChange}></input>
 
                 <div className='link-cart-container'>
 
@@ -76,24 +53,15 @@ const Header = (props) => {
                     </div>
 
                     <div className='link-container'>
-                        {/* <Link to="/login" className='text-decoration-none text-light '>Login</Link>
-                        <Link to="/Register" className='text-decoration-none text-light '>Register</Link> */}
                         <LinkOrHeader user={user} />
-
                     </div>
 
-
-
                 </div>
-
             </div>
         </div>
 
     )
 
-
 };
-
-
 
 export default Header;
