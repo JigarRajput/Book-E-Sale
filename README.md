@@ -10,7 +10,7 @@ This is basically an e-commerce web-app developed using Reactjs along with a bit
 
 ### following endpoint is working and useable simply by browser
 
-### /getbooks 
+### /api/getbooks 
 #### gives all the books available in the database 
 there are other endpoints too but they are POST end points so...
 
