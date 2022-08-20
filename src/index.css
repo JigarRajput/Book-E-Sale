@@ -325,8 +325,10 @@ body {
 
 /*Card styling*/
 .card {
+  box-sizing: content-box;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 18rem;
+  max-width: 15rem;
+  max-height: 30rem;
   font-family: arial;
   border: #333;
   margin-bottom: 30px;
@@ -342,7 +344,7 @@ body {
 
 .card button {
   color: white;
-  background-color: red;
+  background-color: rgb(155, 155, 155);
   text-align: center;
   cursor: pointer;
   width: 100%;
@@ -354,7 +356,7 @@ body {
 }
 
 .card-bottom {
-  padding: 10px;
+  padding: 5px;
 }
 
 .green-discount {
@@ -362,17 +364,14 @@ body {
 }
 
 .price-container {
-  margin-top: 10px;
   display: flex;
 }
 
 .discount {
   color: #509e2f;
+  margin-bottom: 0em;
 }
 
-.net-price {
-  margin-bottom: 10px;
-}
 
 /*  Cart page css starts here  */
 
