@@ -40,7 +40,7 @@ const Login = () => {
     const email = event.target.elements.email.value
     const password = event.target.elements.password.value
 
-    const response = await fetch('https://rest-api-tatvasoft.herokuapp.com/user/login', {
+    const response = await fetch('https://spring-boot-postgres-restapi-production.up.railway.app/user/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

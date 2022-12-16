@@ -38,46 +38,62 @@ const Cart = () => {
         total_items = total_items + items[i].count;
     }
 
+    if (items.length === 0) {
+        return (
+            <div>
+                <Header />
+                <div className='cart-page bg-light'>
 
-    return (
-        <div>
-            <Header />
-            <div className='cart-page bg-light'>
-
-                <h1> Cart Page </h1>
-                <div className='status-container'>
-                    <div className='shopping-status'>
-                        <div className='bag-status-left ms-4'>
-                            <p id='my-bag'>Products: </p>
-                            <label id='no-of-items'>{total_items}</label>
-                        </div>
-                        <div className='total-bag-price'>
-                            <label id="bag-price">{total_price}</label>
-                            <p className='nett-price'>Total Price: </p>
-
-                        </div>
-                    </div>
+                    <h1> Nothing in cart ! </h1>
+                    <img src='/images/empty_cart.png' width='400px;' />
                 </div>
+                <Footer />
+            </div>
+        )
+    }
 
-                <div className='main-layout-container mb-5'>
-                    <div className='cart-card-container '>
+    else {
+        return (
+            <div>
+                <Header />
+                <div className='cart-page bg-light'>
 
-                        {items.map((book) => <CartCard book={book} />)}
+                    <h1> Your cart  </h1>
+                    <div className='status-container'>
+                        <div className='shopping-status'>
+                            <div className='bag-status-left ms-4'>
+                                <p id='my-bag'>Products: </p>
+                                <label id='no-of-items'>{total_items}</label>
+                            </div>
+                            <div className='total-bag-price'>
+                                <label id="bag-price">{total_price}</label>
+                                <p className='nett-price'>Total Price: </p>
 
+                            </div>
+                        </div>
                     </div>
-                </div>
 
-                <div className='place-order-container'>
-                    <div className='place-order-wrapper'>
-                        <button className='btn btn-danger ms-4' onClick={orderHandler}>Place Order</button>
+                    <div className='main-layout-container mb-5'>
+                        <div className='cart-card-container '>
+
+                            {items.map((book) => <CartCard book={book} />)}
+
+                        </div>
                     </div>
+
+                    <div className='place-order-container'>
+                        <div className='place-order-wrapper'>
+                            <button className='btn btn-danger mx-0' onClick={orderHandler}>Place Order</button>
+                        </div>
+                    </div>
+                    <Footer />
                 </div>
 
             </div>
-            <Footer />
-        </div>
 
-    )
+        )
+    }
+
 };
 
 

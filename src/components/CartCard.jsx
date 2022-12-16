@@ -52,24 +52,27 @@ const CartCard = ({ book }) => {
                 <div className='cart-right'>
                     <div className='cart-right_left d-flex flex-column'>
                         <label>{book.title}</label><br />
-                        {/* <p>{book.description.substring(1, 20)}</p> */}
+
                         <div className='mt-4'>
+
+                            <strong>Qty: &nbsp;</strong>
                             <button className='btn btn-dark btn-sm ' type='button' onClick={() => addHandler(book)}> + </button>
-                            {/* <input className='cart-button-input mx-2 ' type="number" maxLength="1"></input> */}
                             <label>&nbsp;{book.count}&nbsp;</label>
                             <button className='btn btn-dark btn-sm ' type='button' onClick={() => subtractHandler(book)}>-</button>
+
                         </div>
                     </div>
                     <div className='cart-right_right d-flex flex-column justify-content-between'>
-                        <label>{Math.round(book.price - book.price * (book.discount / 100))}</label>
+                        <div className='d-flex'>
+                            <label>Net Price:&nbsp;</label>
+                            <label><strong>{Math.round(book.price - book.price * (book.discount / 100))}</strong></label>
+                        </div>
                         <div className='price-discount mt-1'> <label className='mb-1'><del>{book.price}</del><p className='mx-3'>{book.discount}% off</p></label></div>
                         <button className='btn btn-dark btn-sm' onClick={() => removeCartHandler(book)}>Remove</button>
                     </div>
                 </div>
-                {/* console.log(state.addCartReducer.cartItems) */}
-
             </div>
-            {/* ))} */}
+
 
 
         </div>

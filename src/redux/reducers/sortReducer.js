@@ -12,7 +12,7 @@ const sortReducer = (state = initialState, action) => {
         case SORT_BY_PRICE: return {
             ...state,
             sorted_books: [...action.data.sort(function (a, b) {
-                return a.price - b.price;
+                return (a.price - 0.01 * a.discount) - (b.price - 0.01 * b.discount);
             })]
         }
 

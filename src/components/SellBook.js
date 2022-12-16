@@ -1,11 +1,13 @@
 import React from 'react'
 import { useState } from 'react';
 import Header from './Header'
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 export default function SellBook() {
 
     const [image, setImage] = useState("")
+    const navigate = useNavigate();
 
     const uploadImage = async (e) => {
 
@@ -45,8 +47,12 @@ export default function SellBook() {
 
 
         axios
-            .post("https://rest-api-tatvasoft.herokuapp.com/api/post", bodyData)
-            .then(res => console.log(res))
+            .post("https://spring-boot-postgres-restapi-production.up.railway.app/api/post", bodyData)
+            .then((res) => {
+                alert("Your Book has been listed successfully");
+                navigate("/")
+            }
+            )
             .catch(err => console.log(err));
     }
 
@@ -87,7 +93,7 @@ export default function SellBook() {
                     <button className='btn btn-success px-5' type='submit'>Sell Book</button>
                 </form>
 
-                <img src={image} />
+                {/* <img src={image} /> */}
             </div>
         </div >
     )

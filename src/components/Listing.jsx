@@ -20,9 +20,10 @@ const Listing = () => {
     const search_term = useSelector((state) => state.search.term)
 
     useEffect(() => {
-        fetch('https://rest-api-tatvasoft.herokuapp.com/api/getbooks')
+        fetch('https://spring-boot-postgres-restapi-production.up.railway.app/api/getbooks')
             .then(res => res.json())
             .then((data) => {
+                localStorage.setItem('books_', data)
                 setBooks(data)
             })
             .catch(console.log)

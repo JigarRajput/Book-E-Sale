@@ -2,9 +2,12 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <div className="container-fluid py-4 text-center bg-secondary footer">
-            <p className="text-light">© 2022 Book-baazar.herokuapp.com. All rights reserved.</p>
-        </div>)
+        <div className='footer-container bg-secondary'>
+            <footer className="footer-css bg-secondary">
+                <p className="text-light">© 2022 Book-baazar.herokuapp.com. All rights reserved.</p>
+            </footer>
+        </div>
+    )
 
 };
 

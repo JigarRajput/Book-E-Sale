@@ -11,7 +11,7 @@ import Login from './components/Login';
 import Cart from './components/Cart';
 import Listing from './components/Listing'
 import SellBook from './components/SellBook';
-
+import EditProduct from './components/EditProduct';
 
 
 const App = () => {

@@ -101,6 +101,10 @@ body {
 
 /*My CSS starts here*/
 
+body {
+  height: 100%;
+}
+
 .create-account-page-wrapper {
   background-color: #E8EAE3;
 }
@@ -180,10 +184,6 @@ body {
 }
 
 /*my css of search bar*/
-
-.login-page {
-  /* background-color: #E8EAE3; */
-}
 
 .login-wrapper {
   margin-bottom: 20px;
@@ -287,9 +287,6 @@ body {
   color: white;
 }
 
-.footer-margin-top {
-  margin-top: 20px;
-}
 
 .listing-page {
   background-color: #E8EAE3;
@@ -380,6 +377,10 @@ body {
   padding-top: 50px;
 }
 
+.cart-page {
+  text-align: center;
+}
+
 .status-container {
   margin: auto;
   width: 50%;
@@ -428,6 +429,7 @@ body {
 
 .cart-page {
   /* background-color: #E8EAE3; */
+  height: 100%;
 }
 
 .cart-card-wrapper {
@@ -539,22 +541,26 @@ body {
 }
 
 .place-order-container {
-  margin: auto;
-  width: 50%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .place-order-wrapper {
-  width: 585.2px;
+  width: 48%;
+  /* margin: auto; */
+  display: flex;
+  align-items: flex-start;
 }
 
-.place-order-wrapper button {
+.place-order-container button {
   color: white;
-  margin-top: 35px;
+  margin: 0;
   padding: 5px;
   width: 139.79px;
   height: 40px;
   background-color: red;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
 }
 
 /* Edit Product Page CSS starts */
@@ -723,21 +729,30 @@ table a {
 }
 
 /*footer css starts*/
-.footer-container {
+/* .footer-container {
   width: 100%;
-  height: 60px;
-  background-color: #2874f0;
+  position: relative;
+} */
+
+html {
+  /* position: relative; */
+  min-height: 100%;
 }
+
 
 footer {
+  position: absolute;
+  bottom: 0;
   width: 100%;
-  background-color: #2874f0;
+  margin-top: 15rem;
+  padding: 15px 0px 15px 0px;
+  text-align: center;
 }
 
-.footer-container p {
-  text-align: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
+.footer-container {
+  position: relative;
+  margin-top: 150px;
+
 }
 
 /*  */

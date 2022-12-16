@@ -54,7 +54,7 @@ const Register = () => {
     const fname = event.target.elements.fname.value
     const lname = event.target.elements.lname.value
 
-    const response = await fetch('https://rest-api-tatvasoft.herokuapp.com/user/register', {
+    const response = await fetch('https://spring-boot-postgres-restapi-production.up.railway.app/user/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
