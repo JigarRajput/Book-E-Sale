@@ -5,7 +5,7 @@ This is basically an e-commerce web-app developed using Reactjs along with a bit
 
 ### I have deployed both REST api and frontend on heroku. Following are the links you can visit my project.
 
-### [Complete Application](https://book-baazar.herokuapp.com/)
+### [Complete Application](https://tatvasoft.netlify.app/)
 ### [REST API](https://rest-api-tatvasoft.herokuapp.com/)
 
 ### following endpoint is working and useable simply by browser
